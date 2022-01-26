@@ -21,7 +21,7 @@ class CreateArtistsTable extends Migration
             $table->string('origin_country');
             $table->string('music_genre');
             $table->string('label', 30)->nullable();
-            $table->tinyInteger('album_count')->nullable();
+            // $table->tinyInteger('album_count')->nullable();
             $table->timestamps();
         });
     }

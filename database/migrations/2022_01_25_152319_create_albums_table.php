@@ -15,14 +15,16 @@ class CreateAlbumsTable extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('artist_id');
-            $table->bigInteger('song_id');
+            // $table->bigInteger('artist_id');
+            // $table->bigInteger('song_id');
             $table->string('name',50);
-            $table->date('exit_date');
+            $table->year('exit_date');
             $table->string('genre');
             $table->string('album_type');
-            $table->integer('sales')->nullable();
-            $table->tinyInteger('number_of_songs');
+            $table->bigInteger('sales')->unsigned()->default(0);
+            $table->bigInteger('views')->unsigned()->default(0);
+            // $table->string('cover')->nullable();
+            // $table->tinyInteger('number_of_songs');
             $table->string('record_company');
             $table->timestamps();
         });
