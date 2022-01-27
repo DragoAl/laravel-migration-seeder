@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Album::class, function (Faker $faker) {
     return [
-        'name' => $faker -> word(2, false),
+        'name' => $faker -> words(2, true),
         'exit_date' => $faker -> year(),
         'genre' => $faker -> word(),
         'album_type' => $faker -> word(),
